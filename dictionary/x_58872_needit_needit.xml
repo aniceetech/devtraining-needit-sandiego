@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="pm" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="ServiceNow Admin" sequence="0" value="sa"/>
+                <element inactive_on_update="false" label="Tech Writer" sequence="1" value="tw"/>
+                <element inactive_on_update="false" label="Project Management" sequence="2" value="pm"/>
+                <element inactive_on_update="false" label="agile scrum" sequence="3" value="as"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="pm1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="ServiceNow Admin 1" sequence="0" value="sa1"/>
+                <element inactive_on_update="false" label="ServiceNow Admin 2" sequence="1" value="sa2"/>
+                <element inactive_on_update="false" label="Tech Writer 1" sequence="2" value="tw1"/>
+                <element inactive_on_update="false" label="Tech Writer 2" sequence="3" value="tw2"/>
+                <element inactive_on_update="false" label="Project Management 1" sequence="4" value="pm1"/>
+                <element inactive_on_update="false" label="Project Management 2" sequence="5" value="pm2"/>
+                <element inactive_on_update="false" label="agile scrum 1" sequence="6" value="as1"/>
+                <element inactive_on_update="false" label="agile scrum 2" sequence="7" value="ag2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
